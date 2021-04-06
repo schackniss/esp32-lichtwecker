@@ -42,8 +42,8 @@ unsigned int localPort = 8888;  // local port to listen for UDP packets
 DFRobotDFPlayerMini mp3Player;  //MP3 Player
 uint8_t volume = 10;  //MP3 Player Volume 0...30
 
-uint8_t page = 0; //currently display page -> FSM 0...16
-uint8_t line = 0; //current cursor position on page -> FSM  0...3
+uint8_t page = 0; //currently display page 0...16
+uint8_t line = 0; //current cursor position on page 0...3
 
 uint8_t prevMinute = 0; //value of the previous minute 0...59 -> needed for wakeUpLigt(wecker wecker) and wakeUpTime(wecker wecker)
 
@@ -176,7 +176,7 @@ void loop() {
       pressedBack = false;
     }
 
-    //display menu on LCD -> FSM
+    //display menu on LCD
     switch (page) {
       case 1:
         printMenu();
